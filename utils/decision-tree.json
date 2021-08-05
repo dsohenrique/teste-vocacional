@@ -1,0 +1,74 @@
+{
+  "nodes": [{
+    "id": 1,
+    "parent": null,
+    "children": [2, 3],
+    "question": "Qual voce prefere, sorvete ou bolo?"
+  }, {
+    "id": 2,
+    "parent": 1,
+    "children": [4, 10, 11],
+    "question": "Voce compraria um carro eletrico?",
+    "answer": "Bolo"
+  }, {
+    "id": 3,
+    "parent": 1,
+    "children": [5, 6],
+    "question": "Na sua opiniao, o arroz vem por cima ou por baixo?",
+    "answer": "Sorvete"
+  }, {
+    "id": 4,
+    "parent": 1,
+    "children": [7, 12],
+    "question": "Praia ou cinema?",
+    "answer": "Sim"
+  }, {
+    "id": 5,
+    "parent": 3,
+    "children": [],
+    "question": null,
+    "answer": "Cima"
+  }, {
+    "id": 6,
+    "parent": 3,
+    "children": [],
+    "question": null,
+    "answer": "Baixo"
+  }, {
+    "id": 7,
+    "parent": 4,
+    "children": [8, 9],
+    "question": "Qual time voce torce?",
+    "answer": "Praia"
+  }, {
+    "id": 8,
+    "parent": 7,
+    "children": [],
+    "question": null,
+    "answer": "Flamengo"
+  }, {
+    "id": 9,
+    "parent": 7,
+    "children": [],
+    "question": null,
+    "answer": "Cruzeiro"
+  }, {
+    "id": 10,
+    "parent": 2,
+    "children": [],
+    "question": null,
+    "answer": "Nao"
+  }, {
+    "id": 11,
+    "parent": 2,
+    "children": [],
+    "question": null,
+    "answer": "Talvez"
+  }, {
+    "id": 12,
+    "parent": 4,
+    "children": [],
+    "question": null,
+    "answer": "Cinema"
+  }]
+}
