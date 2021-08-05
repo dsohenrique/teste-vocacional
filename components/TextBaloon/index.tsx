@@ -5,6 +5,8 @@ interface IBaloonProps {
   children: any;
 }
 
-export const TextBaloon: FC<IBaloonProps> = ({ children }) => {
+const TextBaloon: FC<IBaloonProps> = ({ children }) => {
   return <StyledBaloon>{children}</StyledBaloon>;
 };
+
+export default TextBaloon;

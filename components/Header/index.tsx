@@ -51,7 +51,8 @@ export const GlobalStyle = createGlobalStyle`
   body {
     height: 100%;
     font-family: "Aprova", sans-serif;
-    color: black;
+    color: white;
+    background-color: #000000;
   }
 
   h1, h2, h3, h4, h5, p {
