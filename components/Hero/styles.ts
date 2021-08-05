@@ -8,6 +8,10 @@ export const Container = styled.div`
   position: relative;
   min-height: calc(100vh - 20px);
   justify-content: space-between;
+  padding: 0px 54px 0px 0px;
+  @media only screen and (max-width: 1024px) {
+    padding: 0px;
+  }
 `;
 
 export const StyledIntroContainer = styled.div`
