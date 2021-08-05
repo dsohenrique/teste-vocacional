@@ -6,7 +6,8 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   position: relative;
-  min-height: 100vh;
+  min-height: calc(100vh - 20px);
+  justify-content: space-between;
 `;
 
 export const StyledIntroContainer = styled.div`
@@ -51,9 +52,10 @@ export const StyledIntroSubtitle = styled.h4`
 `;
 
 export const StyledDescomplicaIconContainer = styled.div`
-  position: relative;
-  width: 100vw;
+  padding: 46px 0px 0px 46px;
   @media only screen and (max-width: 600px) {
+    padding: 0px;
+    position: relative;
     display: flex;
     justify-content: center;
   }
@@ -62,9 +64,7 @@ export const StyledDescomplicaIconContainer = styled.div`
 export const StyledDescomplicaIcon = styled(DescomplicaIcon)``;
 
 export const StyledWomanIconContainer = styled.div`
-  position: absolute;
-  bottom: 0px;
-  left: 0px;
+  position: relative;
   > * {
     &:first-child {
       display: none;
