@@ -1,10 +1,11 @@
+/* eslint-disable @next/next/no-page-custom-font */
 import React, { FC } from 'react';
 import { createGlobalStyle } from 'styled-components';
 import { Helmet } from 'react-helmet';
 
 const fontRepo = 'https://d3awytnmmfk53d.cloudfront.net/landings/static/fonts';
 
-const GlobalStyle = createGlobalStyle`
+export const GlobalStyle = createGlobalStyle`
   @font-face {
     font-family: 'Aprova';
     src:url('${fontRepo}/aprova-sans/Aprova-Regular.woff2') format('woff2'), 
@@ -45,13 +46,24 @@ const GlobalStyle = createGlobalStyle`
   html {
     font-size: 10px;
   }
+  
+  html,
+  body {
+    height: 100%;
+    font-family: "Aprova", sans-serif;
+    color: black;
+  }
+
+  h1, h2, h3, h4, h5, p {
+    font-family: "Aprova", sans-serif;
+    margin: 0;
+  }
 `;
 
 const Header: FC = () => (
   <Helmet>
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet" />
-    <GlobalStyle />
   </Helmet>
 );
 

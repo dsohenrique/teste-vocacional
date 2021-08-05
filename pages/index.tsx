@@ -1,9 +1,10 @@
 import Head from 'next/head'
-import Header from '../components/Header'
+import Header, { GlobalStyle } from '../components/Header'
 
 export default function Home() {
   return (
     <div>
+      <GlobalStyle />
       <Header />
       <Head>
         <title>Teste Vocacional</title>
