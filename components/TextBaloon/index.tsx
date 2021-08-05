@@ -1,12 +1,16 @@
 import React, { FC } from 'react';
-import { StyledBaloon } from './styles';
+import { StyledBaloonContainer, StyledBaloon } from './styles';
 
 interface IBaloonProps {
   children: any;
 }
 
 const TextBaloon: FC<IBaloonProps> = ({ children }) => {
-  return <StyledBaloon>{children}</StyledBaloon>;
+  return <StyledBaloonContainer>
+      <StyledBaloon>
+        {children}
+      </StyledBaloon>
+    </StyledBaloonContainer>;
 };
 
 export default TextBaloon;
