@@ -43,21 +43,14 @@ export const GlobalStyle = createGlobalStyle`
     font-style: normal;
   }
   
-  html {
-    font-size: 10px;
-  }
-  
   html,
   body {
-    height: 100%;
     font-family: "Aprova", sans-serif;
-    color: white;
     background-color: #000000;
   }
 
   h1, h2, h3, h4, h5, p {
     font-family: "Aprova", sans-serif;
-    margin: 0;
   }
 `;
 

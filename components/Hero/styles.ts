@@ -1,15 +1,91 @@
 import styled from 'styled-components';
-import DescomplicaIcon from './fairyIcon';
+import DescomplicaIcon from './descomplicaIcon';
+import WomanIcon from './womanIcon';
 
 export const Container = styled.div`
+  display: flex;
+  flex-direction: column;
   position: relative;
-  min-height: 800px;
-  padding: 46px;
+  min-height: 100vh;
 `;
 
-export const StyledDescomplicaIcon = styled(DescomplicaIcon)`
-
+export const StyledIntroContainer = styled.div`
+  padding: 64px;
+  color: black;
+  @media only screen and (max-width: 600px) {
+    padding: 10px;
+  }
 `;
+
+export const StyledIntroTitle = styled.h2`
+  font-family: Aprova Sans;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 50px;
+  line-height: 64px;
+  letter-spacing: -2.4px;
+  text-overflow: ellipsis;
+  overflow: hidden; 
+  width: 100%;
+  @media only screen and (max-width: 600px) {
+    text-align: center;
+    font-size: 40px;
+    line-height: 44px;
+    letter-spacing: -2px;
+  }
+`;
+
+export const StyledIntroSubtitle = styled.h4`
+  font-family: Aprova Sans;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 40px;
+  letter-spacing: -1.6px;
+  line-height: 44px;
+  @media only screen and (max-width: 600px) {
+    text-align: center;
+    font-size: 25px;
+    line-height: 44px;
+    letter-spacing: -1.6px;
+  }
+`;
+
+export const StyledDescomplicaIconContainer = styled.div`
+  position: relative;
+  width: 100vw;
+  @media only screen and (max-width: 600px) {
+    display: flex;
+    justify-content: center;
+  }
+`;
+
+export const StyledDescomplicaIcon = styled(DescomplicaIcon)``;
+
+export const StyledWomanIconContainer = styled.div`
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  > * {
+    &:first-child {
+      display: none;
+    }
+    &:last-child {
+      display: initial;
+    }
+  }
+  @media only screen and (max-width: 600px) {
+    > * {
+      &:first-child {
+        display: initial;
+      }
+      &:last-child {
+      display: none;
+      }
+    }
+  }
+`;
+
+export const StyledWomanIcon = styled(WomanIcon)``;
 
 export const BackgroundImage = styled.img`
 
