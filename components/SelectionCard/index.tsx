@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { Card, Icon, Title } from './styles';
+import { Card, Icon, Title, MinorCard, MinorTitle } from './styles';
 
 interface ISelectionCard {
   icon: any;
@@ -7,10 +7,18 @@ interface ISelectionCard {
 }
 
 export const SelectionCard: FC<ISelectionCard> = ({ icon, title }) => {
+  const hasIcon = icon && true;
+  if (icon) {
+    return (
+      <Card>
+        {icon && <Icon>{icon}</Icon>}
+        <Title>{title}</Title>
+      </Card>
+    );
+  }
   return (
-    <Card>
-      <Icon>{icon}</Icon>
-      <Title>{title}</Title>
-    </Card>
+    <MinorCard>
+      <MinorTitle>{title}</MinorTitle>
+    </MinorCard>
   );
 };
