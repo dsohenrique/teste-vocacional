@@ -22,7 +22,7 @@ const imports = `
     url('${fontRepo}/aprova-sans/Aprova-Bold.ttf') format('truetype');
     font-weight: 800;
     font-style: normal;
-  } 
+  }
 `;
 
 const Header: FC = () => (
