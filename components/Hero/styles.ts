@@ -7,8 +7,11 @@ export const Container = styled.div`
   flex-direction: column;
   position: relative;
   min-height: calc(100vh - 20px);
-  justify-content: space-between;
   padding: 0px 54px 0px 0px;
+  background-image: url(https://d3awytnmmfk53d.cloudfront.net/landings/static/images/new-normal/Hero/professor_hansen.png);
+  background-position: bottom left;
+  background-size: 500px;
+  background-repeat: no-repeat;
   @media only screen and (max-width: 1024px) {
     padding: 0px;
   }
@@ -23,7 +26,7 @@ export const StyledIntroContainer = styled.div`
 `;
 
 export const StyledIntroTitle = styled.h2`
-  font-family: Aprova Sans;
+  font-family: Aprova;
   font-style: normal;
   font-weight: 800;
   font-size: 50px;
@@ -41,7 +44,7 @@ export const StyledIntroTitle = styled.h2`
 `;
 
 export const StyledIntroSubtitle = styled.h4`
-  font-family: Aprova Sans;
+  font-family: Aprova;
   font-style: normal;
   font-weight: 600;
   font-size: 40px;
@@ -66,30 +69,6 @@ export const StyledDescomplicaIconContainer = styled.div`
 `;
 
 export const StyledDescomplicaIcon = styled(DescomplicaIcon)``;
-
-export const StyledWomanIconContainer = styled.div`
-  position: relative;
-  > * {
-    &:first-child {
-      display: none;
-    }
-    &:last-child {
-      display: initial;
-    }
-  }
-  @media only screen and (max-width: 600px) {
-    > * {
-      &:first-child {
-        display: initial;
-      }
-      &:last-child {
-      display: none;
-      }
-    }
-  }
-`;
-
-export const StyledWomanIcon = styled(WomanIcon)``;
 
 export const BackgroundImage = styled.img`
 

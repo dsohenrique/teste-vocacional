@@ -55,12 +55,12 @@ export const GlobalStyle = createGlobalStyle`
   
   html,
   body {
-    font-family: "Aprova", sans-serif;
+    font-family: Aprova;
     background-color: #000000;
   }
 
   h1, h2, h3, h4, h5, p {
-    font-family: "Aprova", sans-serif;
+    font-family: Aprova;
     margin: 0;
   }
 `;

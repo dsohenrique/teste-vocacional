@@ -1,6 +1,6 @@
 import React from 'react';
 import TextBaloon from '../TextBaloon';
-import { Container, StyledIntroContainer, StyledIntroTitle, StyledIntroSubtitle, StyledDescomplicaIconContainer, StyledDescomplicaIcon, StyledWomanIconContainer, StyledWomanIcon } from './styles'
+import { Container, StyledIntroContainer, StyledIntroTitle, StyledIntroSubtitle, StyledDescomplicaIconContainer, StyledDescomplicaIcon } from './styles'
 
 const Hero = () => <Container>
     <StyledDescomplicaIconContainer>
@@ -12,10 +12,6 @@ const Hero = () => <Container>
         <StyledIntroSubtitle>Prepare-se para descobrir grandes coisas sobre o seu futuro!</StyledIntroSubtitle>
       </StyledIntroContainer>
     </TextBaloon>
-    <StyledWomanIconContainer>
-      <StyledWomanIcon isSmall={true} />
-      <StyledWomanIcon isSmall={false} />
-    </StyledWomanIconContainer>
   </Container>
 
 export default Hero;

@@ -8,6 +8,7 @@ export const StyledBaloonContainer = styled.div`
 `;
 
 export const StyledBaloon = styled.div`
+  position: relative;
   background-color: white;
   min-height: 200px;
   height: fit-content;
