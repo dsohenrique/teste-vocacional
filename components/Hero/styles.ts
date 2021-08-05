@@ -11,10 +11,10 @@ export const Container = styled.div`
 `;
 
 export const StyledIntroContainer = styled.div`
-  padding: 64px;
+  padding: 38px 52px;
   color: black;
   @media only screen and (max-width: 600px) {
-    padding: 10px;
+    padding: 20px;
   }
 `;
 
