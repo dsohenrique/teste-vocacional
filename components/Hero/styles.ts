@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import DescomplicaIcon from './descomplicaIcon';
 import WomanIcon from './womanIcon';
 
-export const Container = styled.div`
+export const Container = styled.div<{ imgSize: string }>`
   display: flex;
   flex-direction: column;
   position: relative;

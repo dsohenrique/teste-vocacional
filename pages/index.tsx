@@ -12,7 +12,7 @@ export default function Home() {
         <meta name="description" content="O melhor teste de todos, agora em 1 minuto!" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Hero title="" subtitle="" imageSize="">
+      <Hero title="Olá, eu sou o Descomplikator" subtitle="Prepare-se para descobrir grandes coisas sobre o seu futuro!" imageSize="big">
         {/* Components here */}
       </Hero>
     </>
