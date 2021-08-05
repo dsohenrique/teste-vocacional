@@ -6,7 +6,7 @@ interface IAlternative {
   text: string;
 }
 
-export const AlternativeComponent: FC<IAlternative> = ({ number, text }) => {
+const AlternativeComponent: FC<IAlternative> = ({ number, text }) => {
   return (
     <Alternative>
       <span>{number}</span>
@@ -14,3 +14,5 @@ export const AlternativeComponent: FC<IAlternative> = ({ number, text }) => {
     </Alternative>
   );
 };
+
+export default AlternativeComponent;

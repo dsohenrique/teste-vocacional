@@ -6,7 +6,7 @@ interface ISelectionCard {
   title: string;
 }
 
-export const SelectionCard: FC<ISelectionCard> = ({ icon, title }) => {
+const SelectionCard: FC<ISelectionCard> = ({ icon, title }) => {
   const hasIcon = icon && true;
   if (icon) {
     return (
@@ -22,3 +22,5 @@ export const SelectionCard: FC<ISelectionCard> = ({ icon, title }) => {
     </MinorCard>
   );
 };
+
+export default SelectionCard;

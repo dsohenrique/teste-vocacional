@@ -2,7 +2,7 @@ import React from 'react';
 import TextBaloon from '../TextBaloon';
 import { Container, StyledIntroContainer, StyledIntroTitle, StyledIntroSubtitle, StyledDescomplicaIconContainer, StyledDescomplicaIcon } from './styles'
 
-const Hero = ({ title, subtitle, imageSize, children }: { title?: string, subtitle?: string, imageSize: string, children: any }) => 
+const Hero = ({ title, subtitle, imageSize, children }: { title?: string, subtitle?: string, imageSize: 'big' | 'small', children: any }) => 
 (<Container imgSize={imageSize}>
     <StyledDescomplicaIconContainer>
       <StyledDescomplicaIcon />
