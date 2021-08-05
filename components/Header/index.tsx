@@ -22,6 +22,16 @@ export const GlobalStyle = createGlobalStyle`
     url('${fontRepo}/aprova-sans/Aprova-Bold.woff') format('woff'), 
     url('${fontRepo}/aprova-sans/Aprova-Bold.otf') format('opentype'), 
     url('${fontRepo}/aprova-sans/Aprova-Bold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+  } 
+  
+  @font-face{
+    font-family: 'Aprova';
+    src:url('${fontRepo}/aprova-sans/Aprova-Bold.woff2') format('woff2'), 
+    url('${fontRepo}/aprova-sans/Aprova-Bold.woff') format('woff'), 
+    url('${fontRepo}/aprova-sans/Aprova-Bold.otf') format('opentype'), 
+    url('${fontRepo}/aprova-sans/Aprova-Bold.ttf') format('truetype');
     font-weight: 800;
     font-style: normal;
   } 
