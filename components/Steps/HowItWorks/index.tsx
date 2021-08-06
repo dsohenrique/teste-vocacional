@@ -15,11 +15,13 @@ export default function HowItWorks({ goToTest, previousStep }: { goToTest: any, 
           <p>O estudo revela que todos nós somos inteligentes múltiplos, porém existem aptidões que se destacam mais do que as outras e apontam para determinadas áreas. O que leva as pessoas a potencializar as capacidades são os incentivos educacionais e os trajetos que percorrem.</p>
           <br />
           <p>Sendo assim, as tendências profissionais estão ligadas às inteligências e servem de base para as escolhas. Geralmente, atrelamos a ideia de inteligência ao vasto conhecimento acadêmico. No entanto, cada sujeito tem habilidades individuais que independem de méritos escolares.</p>
+          <br />
           <ButtonContainer>
             <ActionButton onClick={goToTest} isDark={false}>
               Fazer o teste
             </ActionButton>
           </ButtonContainer>
+          <br />
         </FormContainer>
     </Hero>
   )

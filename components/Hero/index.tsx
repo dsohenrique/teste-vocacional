@@ -20,10 +20,10 @@ const Hero = ({ title, subtitle, imageSize, children }: { title: string, subtitl
     <TextBaloon>
       <StyledIntroContainer>
         {title && <StyledIntroTitle>
-          <Typewriter string={title} delay={80} onComplete={() => { setFirstEffect(true) }} stopBlinkinOnComplete />
+          <Typewriter string={title} delay={20} onComplete={() => { setFirstEffect(true) }} stopBlinkinOnComplete />
         </StyledIntroTitle>}
         {subtitle && <StyledIntroSubtitle>
-          {firstEffect && <Typewriter string={subtitle} delay={40} onComplete={() => {}} />}
+          {firstEffect && <Typewriter string={subtitle} delay={20} onComplete={() => {}} stopBlinkinOnComplete />}
         </StyledIntroSubtitle>}
       </StyledIntroContainer>
     </TextBaloon>
