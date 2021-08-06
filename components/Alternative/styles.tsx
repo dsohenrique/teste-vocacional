@@ -1,9 +1,10 @@
 import styled from 'styled-components';
 
-export const Alternative = styled.div`
+export const Alternative = styled.div<{ selected: boolean }>`
   max-width: 855px;
   width: 100%;
   border-radius: 20px;
+  cursor: pointer;
   background-color: white;
   color: black;
   display: flex;
@@ -40,5 +41,18 @@ export const Alternative = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+  transition: 0.4s;
+  ${props => props.selected ? `background-color: lightgray;
+  transform: translate(-2px,4px);`: ''}
+  ${props => !props.selected && `&:hover {
+    transform: translate(2px,-4px);
+  }`}
+
+  @media only screen and (max-width: 768px) {
+    width: 80%;
+    span {
+      font-size: 18px;
+    }
   }
 `;

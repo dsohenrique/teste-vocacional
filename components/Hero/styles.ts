@@ -8,8 +8,8 @@ export const Container = styled.div<{ imageSize: string }>`
   position: relative;
   min-height: calc(100vh - 20px);
   padding: ${props => props.imageSize === 'small' ? '0px' : '0px 54px 0px 0px'};
-  background-image: url(https://d3awytnmmfk53d.cloudfront.net/landings/static/images/new-normal/Hero/professor_hansen.png);
-  background-position: ${props => props.imageSize === 'small' ? 'left': 'bottom left'};
+  background-image: url(https://imgur.com/0UOacFE.png);
+  background-position: ${props => props.imageSize === 'small' ? '10px 250px': 'bottom left'};
   background-size: ${props => props.imageSize === 'small' ? '325px' : '500px'};
   background-repeat: no-repeat;
   @media only screen and (max-width: 1024px) {

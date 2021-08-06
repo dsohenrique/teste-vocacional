@@ -10,7 +10,7 @@ export const StyledBaloonContainer = styled.div<{imageSize?: string }>`
 export const StyledBaloon = styled.div<{imageSize?: string }>`
   position: relative;
   background-color: white;
-  min-height: 200px;
+  min-height: 140px;
   height: fit-content;
   width: 837px;
   border-radius: 65px 65px 65px 0;
