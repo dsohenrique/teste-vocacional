@@ -27,9 +27,9 @@ export default function Step4({ nextStep, previousStep }: { nextStep: any, previ
     // nextStep();
   };
 
-  const secondHandleSubmit = (selected: string) => {
+  const secondHandleSubmit = () => {
     localStorage.setItem('@teste-vocacional:dream_course', professionSelect);
-    // nextStep();
+    nextStep();
   };
 
   const selectSubtitle = () => {
@@ -42,7 +42,7 @@ export default function Step4({ nextStep, previousStep }: { nextStep: any, previ
   }
 
   return (
-    <Hero title="" onClick={() => secondHandleSubmit(option)} percentage="25" previousStep={previousStep} subtitle={selectSubtitle()} imageSize="big">
+    <Hero title="" onClick={() => secondHandleSubmit()} percentage="25" previousStep={previousStep} subtitle={selectSubtitle()} imageSize="big">
       <FormContainer>
         {previousDecision === 'Estou em busca da minha primeira graduação' && 
         <>
