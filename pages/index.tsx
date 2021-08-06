@@ -53,7 +53,7 @@ export default function Home() {
       case 9: return <Step9 nextStep={nextStep} previousStep={previousStep} />
       case 10: return <Step10 nextStep={nextStep} previousStep={previousStep} />
       case 11: return <Step11 nextStep={nextStep} previousStep={previousStep} />
-      case 12: return <Result nextStep={nextStep} previousStep={previousStep} />
+      case 12: return <Result nextStep={() => { setStep(50);}} previousStep={previousStep} />
       // How it works step
       case 50: return <HowItWorks goToTest={goToTestStep} previousStep={() => { setStep(2) }} />
       default: return null;
