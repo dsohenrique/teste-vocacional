@@ -14,8 +14,7 @@ export const FormContainer = styled.div`
   width: 100%;
   text-align: left;
   flex-direction: column;
-  // gap: 10px;
-  margin-bottom: 10px;
+  gap: 10px;
   position: relative;
   height: fit-content;
   width: 706px;
