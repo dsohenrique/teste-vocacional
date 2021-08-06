@@ -71,6 +71,7 @@ export const StyledDescomplicaIconContainer = styled.div`
 export const StyledDescomplicaIcon = styled(DescomplicaIcon)``;
 
 export const StyledBackIconContainer = styled.div`
+  cursor: pointer;
   position: absolute;
   top: 10px;
   right: 20px;
