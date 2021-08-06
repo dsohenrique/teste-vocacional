@@ -30,7 +30,7 @@ const Hero = ({
   imageSize: string;
   previousStep?: any;
   children: any;
-  percentage: string;
+  percentage?: string;
 }) => {
   const [firstEffect, setFirstEffect] = useState(false);
   useEffect(() => {
@@ -60,7 +60,6 @@ const Hero = ({
           <ProgressBar percentage={percentage} />
         </StyledProgressBar>
       )}
-
       <TextBaloon>
         <StyledIntroContainer>
           {title && (

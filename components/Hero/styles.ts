@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import DescomplicaIcon from './descomplicaIcon';
 import BackIcon from './BackIcon';
 
@@ -114,10 +114,12 @@ export const BackBar = styled.div`
   height: 100%;
 `;
 
-export const ProgressBar = styled.div`
-  position: absolute;
-  background-color: white;
-  width: ${(props) => props.percentage}%;
-  height: 100%;
-  transition: width 250ms ease;
-`;
+export const ProgressBar = styled.div<{ percentage?: string }>(
+  ({ percentage = '0' }) => css`
+    position: absolute;
+    background-color: white;
+    width: ${percentage}%;
+    height: 100%;
+    transition: width 250ms ease;
+  `
+);
