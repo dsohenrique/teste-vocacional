@@ -22,7 +22,7 @@ export default function Home() {
   }, [step]);
 
   const goToTestStep = () => {
-    setStep(4);
+    setStep(3);
   };
 
   const nextStep = () => {
