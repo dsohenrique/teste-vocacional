@@ -61,7 +61,7 @@ export const StyledIntroSubtitle = styled.h4`
 export const StyledDescomplicaIconContainer = styled.div`
   padding: 46px 0px 0px 46px;
   @media only screen and (max-width: 600px) {
-    padding: 0px;
+    padding: 10px 0px;
     position: relative;
     display: flex;
     justify-content: center;
