@@ -18,10 +18,13 @@ export default function Step10({ nextStep, previousStep }: { nextStep: any, prev
     "Era a pessoa que não fazia mas tinha sempre o nome no trabalho no final",
     "Nenhuma alternativas",
   ];
-  
+
   useEffect(() => {
+    if (localStorage.getItem('@teste-vocacional:movie_question')) {
+      setSelected(localStorage.getItem('@teste-vocacional:movie_question') || "");
+    }
     resetWindowScrollPosition();
-  }, [])
+  }, []);
 
   const handleSubmit = () => {
     localStorage.setItem('@teste-vocacional:movie_question', selected);

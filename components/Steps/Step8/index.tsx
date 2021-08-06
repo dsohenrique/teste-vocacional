@@ -17,8 +17,12 @@ export default function Step8({ nextStep, previousStep }: { nextStep: any, previ
   ];
 
   useEffect(() => {
+    if (localStorage.getItem('@teste-vocacional:tiktok_question')) {
+      setSelected(localStorage.getItem('@teste-vocacional:tiktok_question') || "");
+    }
     resetWindowScrollPosition();
   }, []);
+
 
   const handleSubmit = () => {
     localStorage.setItem('@teste-vocacional:tiktok_question', selected);

@@ -17,8 +17,11 @@ export default function Step9({ nextStep, previousStep }: { nextStep: any, previ
     "Só fica no celular",
     "Nenhuma das alternativas",
   ];
-  
+
   useEffect(() => {
+    if (localStorage.getItem('@teste-vocacional:movie_question')) {
+      setSelected(localStorage.getItem('@teste-vocacional:movie_question') || "");
+    }
     resetWindowScrollPosition();
   }, []);
 

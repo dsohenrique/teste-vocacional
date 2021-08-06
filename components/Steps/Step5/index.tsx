@@ -18,6 +18,9 @@ export default function Step4({ nextStep, previousStep }: { nextStep: any, previ
     if (localStorage.getItem('@teste-vocacional:current_career')) {
       setPreviousDecision(localStorage.getItem('@teste-vocacional:current_career') || "");
     }
+    if (localStorage.getItem('@teste-vocacional:dream_course')) {
+      setProfessionSelect(localStorage.getItem('@teste-vocacional:dream_course') || "");
+    }
     if (localStorage.getItem('@teste-vocacional:name')) {
       setName(localStorage.getItem('@teste-vocacional:name') || "Aluno");
     }

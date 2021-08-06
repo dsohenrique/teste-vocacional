@@ -21,6 +21,9 @@ export default function Step6({ nextStep, previousStep }: { nextStep: any, previ
   ];
 
   useEffect(() => {
+    if (localStorage.getItem('@teste-vocacional:kind_of_people')) {
+      setSelected(localStorage.getItem('@teste-vocacional:kind_of_people') || "");
+    }
     resetWindowScrollPosition();
   }, []);
 
