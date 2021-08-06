@@ -31,7 +31,7 @@ const Hero = ({
 }: {
   title: string;
   subtitle: string;
-  imageSize?: string;
+  imageSize?: any;
   previousStep?: any;
   children: any;
   percentage?: string;
@@ -99,7 +99,11 @@ const Hero = ({
       <ChildrenContainer imageSize={imageSize}>
         {children}
 
-      {onClick && <SubmitButton onClick={onClick}>{ customButtonTooltip ? customButtonTooltip : 'Continuar' }</SubmitButton>}
+        {onClick && (
+          <SubmitButton onClick={onClick}>
+            {customButtonTooltip ? customButtonTooltip : 'Continuar'}
+          </SubmitButton>
+        )}
       </ChildrenContainer>
     </Container>
   );

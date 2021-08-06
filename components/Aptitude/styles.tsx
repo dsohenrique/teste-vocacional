@@ -2,19 +2,21 @@ import styled, { css } from 'styled-components';
 
 export const Aptitude = styled.div<{ isOpen: boolean }>(
   ({ isOpen = false }) => css`
-    height: ${isOpen ? '375px' : '65px'};
+    height: ${isOpen ? '375px' : '55px'};
     transition: height 250ms linear;
     max-width: 954px;
     width: 90%;
     border-radius: 8px;
     background-color: white;
     padding: 14px 12px;
+    border: 1px solid #cacdce;
     svg {
       transform: ${isOpen ? 'rotate(180deg)' : 'rotate(0deg)'};
       transition: transform 250ms linear;
       align-self: center;
       padding: 0px 14px;
       cursor: pointer;
+      user-select: none;
     }
   `
 );
@@ -28,8 +30,8 @@ export const Header = styled.div`
 `;
 
 export const Percentage = styled.div`
-  background-color: black;
-  color: white;
+  background-color: #00e88f;
+  color: black;
   font-family: Aprova;
   font-size: 24px;
   font-style: normal;

@@ -27,10 +27,11 @@ const AptitudeComponent: FC<IAptitude> = ({
 
   return (
     <Aptitude isOpen={isOpen}>
-      <Header onClick={() => setIsOpen(!isOpen)}>
+      <Header>
         <Percentage>{percentage}%</Percentage>
         <Name>{name}</Name>
         <svg
+          onClick={() => setIsOpen(!isOpen)}
           width="24"
           height="13"
           viewBox="0 0 24 13"
