@@ -2,18 +2,18 @@ import styled, { css } from 'styled-components';
 import DescomplicaIcon from './descomplicaIcon';
 import BackIcon from './BackIcon';
 
-export const Container = styled.div<{ imgSize: string }>`
+export const Container = styled.div<{ imageSize: string }>`
   display: flex;
   flex-direction: column;
   position: relative;
   min-height: calc(100vh - 20px);
-  padding: 0px 54px 0px 0px;
+  padding: ${props => props.imageSize === 'small' ? '0px' : '0px 54px 0px 0px'};
   background-image: url(https://d3awytnmmfk53d.cloudfront.net/landings/static/images/new-normal/Hero/professor_hansen.png);
-  background-position: bottom left;
-  background-size: 500px;
+  background-position: ${props => props.imageSize === 'small' ? 'left': 'bottom left'};
+  background-size: ${props => props.imageSize === 'small' ? '325px' : '500px'};
   background-repeat: no-repeat;
   @media only screen and (max-width: 1024px) {
-    padding: 0px;
+    padding: 0px 0px 60px;
   }
 `;
 
@@ -76,6 +76,7 @@ export const StyledBackIconContainer = styled.div`
   position: absolute;
   top: 10px;
   right: 20px;
+  z-index: 99;
 `;
 
 export const StyledBackIcon = styled(BackIcon)``;
@@ -84,10 +85,11 @@ export const BackgroundImage = styled.img``;
 
 export const StyledSvg = styled.svg``;
 
-export const ChildrenContainer = styled.div`
+export const ChildrenContainer = styled.div<{ imageSize?: string}>`
   display: flex;
-  padding: 10px 0px 40px;
+  padding: 10px 0px 85px;
   justify-content: flex-end;
+  justify-content: ${props => props.imageSize === 'small' ? 'center' : 'flex-end'};
   gap: 10px;
   @media only screen and (max-width: 600px) {
     justify-content: center;
@@ -137,11 +139,11 @@ export const ProgressBar = styled.div<{ percentage?: string }>(
 export const SubmitButton = styled.div<{onClick: any}>`
   position: absolute;
   bottom: 0px;
+  right: 0px;
   left: 0px;
   cursor: pointer;
   background-color: #ffffff;
   padding: 24px 20px;
-  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;

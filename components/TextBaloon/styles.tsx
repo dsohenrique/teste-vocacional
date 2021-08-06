@@ -1,13 +1,13 @@
 import styled from 'styled-components';
 
-export const StyledBaloonContainer = styled.div`
+export const StyledBaloonContainer = styled.div<{imageSize?: string }>`
   position: relative;
   width: 100%;
   display: flex;
-  justify-content: flex-end;
+  justify-content: ${props => props.imageSize === 'small' ? 'center' : 'flex-end'};
 `;
 
-export const StyledBaloon = styled.div`
+export const StyledBaloon = styled.div<{imageSize?: string }>`
   position: relative;
   background-color: white;
   min-height: 200px;

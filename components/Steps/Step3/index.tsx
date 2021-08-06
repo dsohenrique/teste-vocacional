@@ -30,13 +30,13 @@ export default function Step3({ nextStep, previousStep }: { nextStep: any, previ
   }
 
   return (
-    <Hero title="" percentage="5" previousStep={previousStep} subtitle="Antes de começar, me fala: como você gosta que te chamem e como eu posso te encontrar depois do teste?" imageSize="big">
-        <FormContainer>
-          <InputText placeholder="Nome" value={name} onChange={(e: { target: { value: any; }; }) => setName(e.target.value)} />
-          <InputText placeholder="Email" value={email} onChange={(e: { target: { value: any; }; }) => setEmail(e.target.value)} />
-          <InputText placeholder="Telefone" value={phone} onChange={(e: { target: { value: any; }; }) => setPhone(e.target.value)} />
-          <ActionButton isDark={false} onClick={handleSubmit}>Continuar</ActionButton>
-        </FormContainer>
+    <Hero title="" percentage="5" previousStep={previousStep} subtitle="Antes de começar, me fala: como você gosta que te chamem e como eu posso te encontrar depois do teste?" imageSize="small">
+      <FormContainer>
+        <InputText placeholder="Nome" value={name} onChange={(e: { target: { value: any; }; }) => setName(e.target.value)} />
+        <InputText placeholder="Email" value={email} onChange={(e: { target: { value: any; }; }) => setEmail(e.target.value)} />
+        <InputText placeholder="Telefone" value={phone} onChange={(e: { target: { value: any; }; }) => setPhone(e.target.value)} />
+        <ActionButton isDark={false} onClick={handleSubmit}>Continuar</ActionButton>
+      </FormContainer>
     </Hero>
   )
 }
