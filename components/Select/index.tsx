@@ -2,10 +2,10 @@ import React, { FC } from 'react';
 import { Select, Option } from './styles';
 
 interface ISelect {
-  options: [];
+  options: string[];
 }
 
-export const SelectionCard: FC<ISelect> = ({ options }) => {
+const SelectionCard: FC<ISelect> = ({ options }) => {
   return (
     <Select>
       {options.map((option, index) => (
@@ -14,3 +14,5 @@ export const SelectionCard: FC<ISelect> = ({ options }) => {
     </Select>
   );
 };
+
+export default SelectionCard;

@@ -1,10 +1,10 @@
-import { useEffect, useState } from 'react';
+import React from 'react';
 import Hero from '../../Hero'
 
-export default function Step2() {
+export default function Step2({ nextStep, howItWorksStep}) {
   return (
     <Hero title="" subtitle="Você está pronto para iniciar o teste vocacional mais bacanudo da internet? " imageSize="big">
-      {/* Componentes aqui */}
+      {/* TODO: Action buttons here */}
     </Hero>
   )
 }

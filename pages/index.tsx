@@ -6,8 +6,7 @@ import Step2 from '../components/Steps/Step2';
 
 export default function Home() {
   // Como salvar a pontuacao dele para o calculo final?
-  const [step, setStep] = useState(1);
-
+  const [step, setStep] = useState(2);
 
   useEffect(() => {
     setStep(1);
@@ -24,10 +23,12 @@ export default function Home() {
     setStep(step - 1);
   };
 
-  const getComponentToRender = () => {
-    switch (step) {
+  const getComponentToRender = (stepSelected: number) => {
+    switch (stepSelected) {
       case 1: return <Step1 />
-      case 2: return <Step2 />
+      case 2: return <Step2 nextStep={nextStep} howItWorksStep={() => setStep(8)} />
+      // How it works step
+      case 8: return <div>how it works page</div>
       default: return <Step1 />
     }
   }
@@ -41,7 +42,7 @@ export default function Home() {
         <meta name="description" content="O melhor teste de todos, agora em 1 minuto!" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      {getComponentToRender()}
+      {getComponentToRender(step)}
     </>
   )
 }
