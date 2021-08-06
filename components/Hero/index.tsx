@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Typewriter } from 'react-typewriting-effect'
 import 'react-typewriting-effect/dist/index.css'
 import TextBaloon from '../TextBaloon';
-import { Container, StyledIntroContainer, StyledIntroTitle, StyledIntroSubtitle, StyledDescomplicaIconContainer, StyledDescomplicaIcon } from './styles'
+import { Container, StyledIntroContainer, StyledIntroTitle, StyledIntroSubtitle, StyledDescomplicaIconContainer, StyledDescomplicaIcon, ChildrenContainer } from './styles'
 
 const Hero = ({ title, subtitle, imageSize, children }: { title: string, subtitle: string, imageSize: string, children: any }) => {
   const [firstEffect, setFirstEffect] = useState(false);
@@ -27,7 +27,9 @@ const Hero = ({ title, subtitle, imageSize, children }: { title: string, subtitl
         </StyledIntroSubtitle>}
       </StyledIntroContainer>
     </TextBaloon>
-    {children}
+    <ChildrenContainer>
+      {children}
+    </ChildrenContainer>
   </Container>);
 }
 

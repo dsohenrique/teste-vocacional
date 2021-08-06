@@ -77,3 +77,14 @@ export const BackgroundImage = styled.img`
 export const StyledSvg = styled.svg`
 
 `;
+
+export const ChildrenContainer = styled.div`
+  display: flex;
+  padding: 10px;
+  justify-content: flex-end;
+  gap: 10px;
+  @media only screen and (max-width: 600px) {
+    justify-content: center;
+    padding: 0px;
+  }
+`;
