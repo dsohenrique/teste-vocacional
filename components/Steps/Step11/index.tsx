@@ -28,7 +28,7 @@ export default function Step11({ nextStep, previousStep }: { nextStep: any, prev
   };
 
   return (
-    <Hero title="" onClick={() => handleSubmit()} percentage="35" previousStep={previousStep} subtitle="Quando você vai ao mercado e recebe o troco no caixa, sua primeira reação é:" imageSize="small">
+    <Hero title="" onClick={() => handleSubmit()} percentage="95" previousStep={previousStep} subtitle="Quando você vai ao mercado e recebe o troco no caixa, sua primeira reação é:" imageSize="small">
       <FormContainer>
         {options.map((item, index) => (
           <Alternative selected={item === selected} onClick={() => { setSelected(item) }} key="index" number={index + 1} text={item} />

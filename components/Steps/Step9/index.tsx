@@ -31,7 +31,7 @@ export default function Step9({ nextStep, previousStep }: { nextStep: any, previ
   };
 
   return (
-    <Hero title="" onClick={() => handleSubmit()} percentage="35" previousStep={previousStep} subtitle="Quem é você quando vai assistir um filme?" imageSize="small">
+    <Hero title="" onClick={() => handleSubmit()} percentage="70" previousStep={previousStep} subtitle="Quem é você quando vai assistir um filme?" imageSize="small">
       <FormContainer>
         {options.map((item, index) => (
           <Alternative selected={item === selected} onClick={() => { setSelected(item) }} key="index" number={index + 1} text={item} />
