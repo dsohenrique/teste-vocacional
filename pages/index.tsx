@@ -3,13 +3,13 @@ import Head from 'next/head'
 import Header, { GlobalStyle } from '../components/Header'
 import Step1 from '../components/Steps/Step1';
 import Step2 from '../components/Steps/Step2';
+import HowItWorks from '../components/Steps/HowItWorks';
 
 export default function Home() {
   // Como salvar a pontuacao dele para o calculo final?
   const [step, setStep] = useState(0);
 
   useEffect(() => {
-    console.log('Rerun?');
     setStep(1);
     setTimeout(() => {
       setStep(2);
@@ -30,7 +30,7 @@ export default function Home() {
       case 2: return <Step2 nextStep={nextStep} howItWorksStep={() => setStep(8)} />
       case 3: return <h1 style={{ color: 'white' }}>LERIGOU</h1>
       // How it works step
-      case 8: return <div>how it works page</div>
+      case 8: return <HowItWorks previousStep={previousStep} />
       default: return null;
     }
   }
