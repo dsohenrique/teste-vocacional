@@ -10,6 +10,12 @@ export const Card = styled.div`
   align-items: center;
   justify-content: space-around;
   box-shadow: #999 -8px 12px 0px -3px;
+  cursor: pointer;
+  transition: 0.4s;
+  &:hover {
+    background-color: ghostwhite;
+    transform: translate(2px,-4px);
+  }
 `;
 
 export const Icon = styled.div`
