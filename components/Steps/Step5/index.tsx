@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 import Hero from '../../Hero'
 import { FormContainer } from './styles';
 import SelectionCard from '../../SelectionCard';
@@ -7,12 +7,14 @@ import CloseIcon from './closeIcon';
 import CheckIcon from './checkIcon';
 
 export default function Step4({ nextStep, previousStep }: { nextStep: any, previousStep: any }) {
+  const resetWindowScrollPosition = useCallback(() => window?.scrollTo(0, 0), []);
   const [name, setName] = useState('');
   const [previousDecision, setPreviousDecision] = useState('');
   const [option, setOption] = useState('');
   const [professionSelect, setProfessionSelect] = useState('');
   
   useEffect(() => {
+    resetWindowScrollPosition()
     if (localStorage.getItem('@teste-vocacional:current_career')) {
       setPreviousDecision(localStorage.getItem('@teste-vocacional:current_career') || "");
     }

@@ -1,9 +1,10 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 import Hero from '../../Hero'
 import { FormContainer } from './styles';
 import Alternative from '../../Alternative';
 
 export default function Step7({ nextStep, previousStep }: { nextStep: any, previousStep: any }) {
+  const resetWindowScrollPosition = useCallback(() => window?.scrollTo(0, 0), []);
   const [selected, setSelected] = useState("");
 
   const options = [
@@ -13,6 +14,10 @@ export default function Step7({ nextStep, previousStep }: { nextStep: any, previ
     "Tenta manter a calma e pensar como pode ajudar",
     "Nenhuma das alternativas",
   ];
+
+  useEffect(() => {
+    resetWindowScrollPosition();
+  }, []);
 
   const handleSubmit = () => {
     localStorage.setItem('@teste-vocacional:problem_situation', selected);
