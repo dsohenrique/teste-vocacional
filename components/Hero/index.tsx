@@ -27,6 +27,7 @@ const Hero = ({
   children,
   percentage,
   onClick,
+  customButtonTooltip,
 }: {
   title: string;
   subtitle: string;
@@ -35,6 +36,7 @@ const Hero = ({
   children: any;
   percentage?: string;
   onClick?: any;
+  customButtonTooltip?: string;
 }) => {
   const [firstEffect, setFirstEffect] = useState(false);
   useEffect(() => {
@@ -97,7 +99,7 @@ const Hero = ({
       <ChildrenContainer imageSize={imageSize}>
         {children}
 
-      {onClick && <SubmitButton onClick={onClick}>Continuar</SubmitButton>}
+      {onClick && <SubmitButton onClick={onClick}>{ customButtonTooltip ? customButtonTooltip : 'Continuar' }</SubmitButton>}
       </ChildrenContainer>
     </Container>
   );
