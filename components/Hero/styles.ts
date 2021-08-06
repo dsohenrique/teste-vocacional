@@ -29,7 +29,7 @@ export const StyledIntroTitle = styled.h2`
   font-family: Aprova;
   font-style: normal;
   font-weight: 800;
-  font-size: 50px;
+  font-size: 48px;
   line-height: 64px;
   letter-spacing: -2.4px;
   text-overflow: ellipsis;
@@ -47,7 +47,7 @@ export const StyledIntroSubtitle = styled.h4`
   font-family: Aprova;
   font-style: normal;
   font-weight: 600;
-  font-size: 40px;
+  font-size: 36px;
   letter-spacing: -1.6px;
   line-height: 44px;
   @media only screen and (max-width: 600px) {

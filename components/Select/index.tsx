@@ -3,11 +3,13 @@ import { Select, Option } from './styles';
 
 interface ISelect {
   options: string[];
+  value: any;
+  onChange: any;
 }
 
-const SelectionCard: FC<ISelect> = ({ options }) => {
+const SelectionCard: FC<ISelect> = ({ options, value, onChange }) => {
   return (
-    <Select>
+    <Select id="course-select" value={value} onChange={onChange}>
       {options.map((option, index) => (
         <Option key={index}>{option}</Option>
       ))}

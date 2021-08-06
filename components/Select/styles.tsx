@@ -1,11 +1,11 @@
 import styled from 'styled-components';
 
 export const Select = styled.select`
-  height: 88px;
   width: 512px;
+  padding: 24px 16px;
   border-radius: 8px;
   font-family: Aprova;
-  font-size: 32px;
+  font-size: 20px;
   font-style: normal;
   font-weight: 400;
   line-height: 24px;
