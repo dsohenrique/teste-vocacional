@@ -56,7 +56,7 @@ export const GlobalStyle = createGlobalStyle`
   html,
   body {
     font-family: Aprova;
-    background-color: #000000;
+    background-color: #00e88f;
   }
 
   h1, h2, h3, h4, h5, p {

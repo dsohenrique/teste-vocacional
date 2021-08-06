@@ -121,7 +121,7 @@ export const StyledProgressBar = styled.div`
 
 export const BackBar = styled.div`
   position: absolute;
-  background-color: #666;
+  background-color: #111;
   width: 100%;
   height: 100%;
 `;
@@ -142,12 +142,12 @@ export const SubmitButton = styled.div<{onClick: any}>`
   right: 0px;
   left: 0px;
   cursor: pointer;
-  background-color: #ffffff;
+  background-color: #111;
   padding: 24px 20px;
   display: flex;
   justify-content: center;
   align-items: center;
   font-family: Aprova;
   font-size: 24px;
-  color: #191A1A;
+  color: #fff;
 `;

@@ -13,7 +13,7 @@ export const Alternative = styled.div<{ selected: boolean }>`
   align-items: center;
   gap: 20px;
   padding: 20px;
-  box-shadow: #999 -10px 11px 0px -3px;
+  box-shadow: #04c974 -10px 11px 0px -3px;
   height: auto;
   span {
     font-family: Aprova;
@@ -26,12 +26,12 @@ export const Alternative = styled.div<{ selected: boolean }>`
     width: 716px;
   }
   span:first-child {
-    border: 3px solid #999;
+    border: 3px solid #04c974;
     width: 40px;
     height: 40px;
     text-align: center;
     border-radius: 8px;
-    color: #999;
+    color: #313435;
     font-family: Aprova;
     font-size: 24px;
     font-style: normal;
