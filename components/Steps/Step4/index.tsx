@@ -17,7 +17,7 @@ export default function Step4({ nextStep, previousStep }: { nextStep: any, previ
   }, [])
 
   return (
-    <Hero title="" previousStep={previousStep} subtitle={`Perfeito, ${name}! Então vamos começar te conhecendo um pouco melhor. Qual é o seu momento atual de carreira?`} imageSize="big">
+    <Hero title="" percentage="15" previousStep={previousStep} subtitle={`Perfeito, ${name}! Então vamos começar te conhecendo um pouco melhor. Qual é o seu momento atual de carreira?`} imageSize="big">
         <FormContainer>
           <SelectionCard icon={<EyeIcon />} title="Estou em busca da minha primeira graduação" />
           <SelectionCard icon={<CertifiedIcon />} title="Estou procurando uma pós graduação" />

@@ -12,18 +12,17 @@ export const FormContainer = styled.div`
   display: flex;
   padding: 20px 0px;
   width: 100%;
-  align-items: flex-end;
-  justify-content: flex-end;
+  align-items: center;
+  justify-content: center;
   flex-direction: row;
+  flex-wrap: wrap;
   gap: 52px;
   position: relative;
   height: fit-content;
   width: 837px;
   border-radius: 65px 65px 65px 0;
   @media only screen and (max-width: 600px) {
-    flex-direction: column;
-    justify-content: center;
-    gap: 20px;
+    gap: 10px;
     min-height: 150px;
     max-width: 96vw;
     border-radius: 65px;

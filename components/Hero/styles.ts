@@ -60,9 +60,12 @@ export const StyledIntroSubtitle = styled.h4`
 
 export const StyledDescomplicaIconContainer = styled.div`
   padding: 10px 0px 0px 20px;
+  display: flex;
+  flex-direction: row;
   @media only screen and (max-width: 600px) {
     padding: 10px 0px;
     position: relative;
+    flex-direction: column;
   }
 `;
 
@@ -92,12 +95,19 @@ export const ChildrenContainer = styled.div`
   }
 `;
 
+export const ProgressBarContainer = styled.div`
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 50px;
+`;
+
 export const StyledProgressBar = styled.div`
   position: absolute;
   width: 70%;
   height: 10px;
   inset-inline: 10px;
-  inset-block: 22px;
+  inset-block: 12px;
   margin: 0 auto;
   div {
     border-radius: 10px;

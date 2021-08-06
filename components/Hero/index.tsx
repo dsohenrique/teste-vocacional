@@ -15,6 +15,7 @@ import {
   StyledProgressBar,
   BackBar,
   ProgressBar,
+  ProgressBarContainer,
 } from './styles';
 
 const Hero = ({
@@ -53,13 +54,15 @@ const Hero = ({
         <a href="https://descomplica.com.br" target="_blank" rel="noreferrer">
           <StyledDescomplicaIcon />
         </a>
+        {percentage && (
+          <ProgressBarContainer>
+            <StyledProgressBar>
+              <BackBar />
+              <ProgressBar percentage={percentage} />
+            </StyledProgressBar>
+          </ProgressBarContainer>
+        )}
       </StyledDescomplicaIconContainer>
-      {percentage && (
-        <StyledProgressBar>
-          <BackBar />
-          <ProgressBar percentage={percentage} />
-        </StyledProgressBar>
-      )}
       <TextBaloon>
         <StyledIntroContainer>
           {title && (
