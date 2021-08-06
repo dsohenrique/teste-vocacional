@@ -1,37 +1,24 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import Head from 'next/head'
 import Header, { GlobalStyle } from '../components/Header'
-import Hero from '../components/Hero'
-
-const componentsComposition = [{
-  id: 'intro',
-  title: '',
-  subtitle: '',
-  toRender: null,
-}, {
-  id: 'alternative',
-  title: null,
-  subtitle: '',
-  toRender: null,
-}];
 
 export default function Home() {
   // Como salvar a pontuacao dele para o calculo final?
-
-
   const [step, setStep] = useState(0);
 
-  useEffect(() => {
-    // Catch the new components and fields
-  }, [step]);
-
   const nextStep = () => {
-
+    setStep(step + 1);
   };
 
   const previousStep = () => {
-
+    setStep(step - 1);
   };
+
+  const getComponentToRender = (stepSelected: number | undefined) => {
+    // const index = componentsComposition.findIndex(item => item.step === stepSelected);
+    // return componentsComposition[index];
+    return <h1>Teste</h1>
+  }
 
   return (
     <>
@@ -42,8 +29,7 @@ export default function Home() {
         <meta name="description" content="O melhor teste de todos, agora em 1 minuto!" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Hero title="Olá, eu sou o Descomplikator" subtitle="Prepare-se para descobrir grandes coisas sobre o seu futuro!" imageSize="big">
-      </Hero>
+      {getComponentToRender()}
     </>
   )
 }
