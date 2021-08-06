@@ -20,7 +20,7 @@ export default function Step7({ nextStep, previousStep }: { nextStep: any, previ
   };
 
   return (
-    <Hero title="" onClick={() => handleSubmit()} percentage="35" previousStep={previousStep} subtitle="Que pessoa você é do seu grupinho? " imageSize="small">
+    <Hero title="" onClick={() => handleSubmit()} percentage="35" previousStep={previousStep} subtitle="Quando alguém se acidenta, você:" imageSize="small">
       <FormContainer>
         {options.map((item, index) => (
           <Alternative selected={item === selected} onClick={() => { setSelected(item) }} key="index" number={index + 1} text={item} />

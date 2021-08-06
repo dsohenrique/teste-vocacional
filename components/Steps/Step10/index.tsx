@@ -8,13 +8,13 @@ export default function Step10({ nextStep, previousStep }: { nextStep: any, prev
 
   const options = [
     "Gostava de pesquisar todo o conteúdo",
-    "Era do time do cada um faz uma part",
-    "Adorava liderar o grup",
-    "Amava apresentar e arrasav",
-    "Até gostava de apresentar mas ficava morrendo de ansiedad",
-    "Apresentar? nem pensar! você morria de vergonh",
+    "Era do time do cada um faz uma parte",
+    "Adorava liderar o grupo",
+    "Amava apresentar e arrasava",
+    "Até gostava de apresentar mas ficava morrendo de ansiedade",
+    "Apresentar? nem pensar! você morria de vergonha",
     "Procrastinação em pessoa! Deixava tudo pro último dia",
-    "Era a pessoa que não fazia mas tinha sempre o nome no trabalho no fina",
+    "Era a pessoa que não fazia mas tinha sempre o nome no trabalho no final",
     "Nenhuma alternativas",
   ];
 
