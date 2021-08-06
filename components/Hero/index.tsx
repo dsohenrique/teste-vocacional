@@ -12,6 +12,9 @@ import {
   ChildrenContainer,
   StyledBackIconContainer,
   StyledBackIcon,
+  StyledProgressBar,
+  BackBar,
+  ProgressBar,
 } from './styles';
 
 const Hero = ({
@@ -20,12 +23,14 @@ const Hero = ({
   imageSize,
   previousStep,
   children,
+  percentage,
 }: {
   title: string;
   subtitle: string;
   imageSize: string;
   previousStep?: any;
   children: any;
+  percentage: string;
 }) => {
   const [firstEffect, setFirstEffect] = useState(false);
   useEffect(() => {
@@ -37,24 +42,24 @@ const Hero = ({
 
   return (
     <Container imgSize={imageSize}>
+      {previousStep && (
+        <StyledBackIconContainer>
+          <a onClick={previousStep}>
+            <StyledBackIcon />
+          </a>
+        </StyledBackIconContainer>
+      )}
       <StyledDescomplicaIconContainer>
-        {previousStep && (
-          <StyledBackIconContainer>
-            <a onClick={previousStep}>
-              <StyledBackIcon />
-            </a>
-          </StyledBackIconContainer>
-        )}
         <a href="https://descomplica.com.br" target="_blank" rel="noreferrer">
           <StyledDescomplicaIcon />
         </a>
-        {percentage && (
-          <StyledProgressBar>
-            <BackBar />
-            <ProgressBar percentage={percentage} />
-          </StyledProgressBar>
-        )}
       </StyledDescomplicaIconContainer>
+      {percentage && (
+        <StyledProgressBar>
+          <BackBar />
+          <ProgressBar percentage={percentage} />
+        </StyledProgressBar>
+      )}
 
       <TextBaloon>
         <StyledIntroContainer>

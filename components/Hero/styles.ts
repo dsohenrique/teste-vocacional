@@ -59,15 +59,10 @@ export const StyledIntroSubtitle = styled.h4`
 `;
 
 export const StyledDescomplicaIconContainer = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
   padding: 10px 0px 0px 20px;
   @media only screen and (max-width: 600px) {
     padding: 10px 0px;
     position: relative;
-    display: flex;
-    justify-content: center;
   }
 `;
 
@@ -98,9 +93,11 @@ export const ChildrenContainer = styled.div`
 `;
 
 export const StyledProgressBar = styled.div`
-  position: relative;
+  position: absolute;
   width: 70%;
   height: 10px;
+  inset-inline: 10px;
+  inset-block: 22px;
   margin: 0 auto;
   div {
     border-radius: 10px;
