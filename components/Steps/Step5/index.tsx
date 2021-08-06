@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 import Hero from '../../Hero'
 import { FormContainer } from './styles';
 import SelectionCard from '../../SelectionCard';
@@ -7,14 +7,19 @@ import CloseIcon from './closeIcon';
 import CheckIcon from './checkIcon';
 
 export default function Step4({ nextStep, previousStep }: { nextStep: any, previousStep: any }) {
+  const resetWindowScrollPosition = useCallback(() => window?.scrollTo(0, 0), []);
   const [name, setName] = useState('');
   const [previousDecision, setPreviousDecision] = useState('');
   const [option, setOption] = useState('');
   const [professionSelect, setProfessionSelect] = useState('');
   
   useEffect(() => {
+    resetWindowScrollPosition()
     if (localStorage.getItem('@teste-vocacional:current_career')) {
       setPreviousDecision(localStorage.getItem('@teste-vocacional:current_career') || "");
+    }
+    if (localStorage.getItem('@teste-vocacional:dream_course')) {
+      setProfessionSelect(localStorage.getItem('@teste-vocacional:dream_course') || "");
     }
     if (localStorage.getItem('@teste-vocacional:name')) {
       setName(localStorage.getItem('@teste-vocacional:name') || "Aluno");
@@ -42,7 +47,7 @@ export default function Step4({ nextStep, previousStep }: { nextStep: any, previ
   }
 
   return (
-    <Hero title="" onClick={() => secondHandleSubmit()} percentage="25" previousStep={previousStep} subtitle={selectSubtitle()} imageSize="big">
+    <Hero title="" onClick={() => secondHandleSubmit()} percentage="25" previousStep={previousStep} subtitle={selectSubtitle()} imageSize="small">
       <FormContainer>
         {previousDecision === 'Estou em busca da minha primeira graduação' && 
         <>

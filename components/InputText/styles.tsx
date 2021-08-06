@@ -8,6 +8,7 @@ export const Input = styled.input`
   padding: 16px 20px;
   border: none;
   box-shadow: none;
+  margin-bottom: 30px;
   &:active {
     border: none;
     box-shadow: none;

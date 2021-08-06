@@ -10,25 +10,22 @@ const fadeIn = `
 
 export const FormContainer = styled.div`
   display: flex;
-  padding: 20px;
+  padding: 20px 0px 60px;
   width: 100%;
-  text-align: left;
-  flex-direction: column;
-  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 35px;
   position: relative;
   height: fit-content;
-  width: 706px;
-  color: #111111;
-  font-family: InterUI;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 28px;
-  letter-spacing: -0.6px;
+  width: 837px;
+  border-radius: 65px 65px 65px 0;
   @media only screen and (max-width: 600px) {
+    gap: 40px;
     min-height: 150px;
     max-width: 96vw;
-    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 65px;
   }
   animation: ${fadeIn};
   @keyframes fadeInOpacity {
@@ -38,13 +35,5 @@ export const FormContainer = styled.div`
     100% {
       opacity: 1;
     }
-  }
-`;
-
-export const ButtonContainer = styled.div`
-  display: flex;
-  justify-content: flex-end;
-  @media only screen and (max-width: 600px) {
-    justify-content: center;
   }
 `;

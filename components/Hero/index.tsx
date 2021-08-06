@@ -30,7 +30,7 @@ const Hero = ({
 }: {
   title: string;
   subtitle: string;
-  imageSize: string;
+  imageSize?: string;
   previousStep?: any;
   children: any;
   percentage?: string;
@@ -45,7 +45,7 @@ const Hero = ({
   }, [title, subtitle]);
 
   return (
-    <Container imgSize={imageSize}>
+    <Container imageSize={imageSize}>
       {previousStep && (
         <StyledBackIconContainer>
           <a onClick={previousStep}>
@@ -66,7 +66,7 @@ const Hero = ({
           </ProgressBarContainer>
         )}
       </StyledDescomplicaIconContainer>
-      <TextBaloon>
+      <TextBaloon imageSize={imageSize}>
         <StyledIntroContainer>
           {title && (
             <StyledIntroTitle>
@@ -94,8 +94,11 @@ const Hero = ({
           )}
         </StyledIntroContainer>
       </TextBaloon>
-      <ChildrenContainer>{children}</ChildrenContainer>
+      <ChildrenContainer imageSize={imageSize}>
+        {children}
+
       {onClick && <SubmitButton onClick={onClick}>Continuar</SubmitButton>}
+      </ChildrenContainer>
     </Container>
   );
 };
