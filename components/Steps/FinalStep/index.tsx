@@ -60,7 +60,7 @@ const FinalStep: FC = () => {
       professions: ['Estatística', 'Física', 'Informática'],
     },
     {
-      percentage: '60',
+      percentage: '20',
       name: 'Perfil Interpessoal',
       content:
         'Uma pessoa com forte inteligência interpessoal é capaz de gerenciar as relações com mais sensibilidade facilmente, conquistar amigos com mais facilidade e lida bem inclusive com as pessoas mais difíceis.',
