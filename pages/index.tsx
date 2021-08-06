@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import Head from 'next/head'
-import Header, { GlobalStyle } from '../components/Header'
+import Head from 'next/head';
+import Header, { GlobalStyle } from '../components/Header';
 import Step1 from '../components/Steps/Step1';
 import Step2 from '../components/Steps/Step2';
 import Step3 from '../components/Steps/Step3';
@@ -41,33 +41,62 @@ export default function Home() {
 
   const getComponentToRender = (stepSelected: number) => {
     switch (stepSelected) {
-      case 1: return <Step1 />
-      case 2: return <Step2 nextStep={nextStep} previousStep={previousStep} howItWorksStep={() => setStep(50)} />
-      case 3: return <Step3 nextStep={nextStep} previousStep={previousStep} />
-      case 4: return <Step4 nextStep={nextStep} previousStep={previousStep} />
-      case 5: return <Step5 nextStep={nextStep} previousStep={previousStep} />
-      case 6: return <Step6 nextStep={nextStep} previousStep={previousStep} />
-      case 7: return <Step7 nextStep={nextStep} previousStep={previousStep} />
-      case 8: return <Step8 nextStep={nextStep} previousStep={previousStep} />
-      case 9: return <Step9 nextStep={nextStep} previousStep={previousStep} />
-      case 10: return <Step10 nextStep={nextStep} previousStep={previousStep} />
-      case 11: return <Step11 nextStep={nextStep} previousStep={previousStep} />
+      case 1:
+        return <Step1 />;
+      case 2:
+        return (
+          <Step2
+            nextStep={nextStep}
+            previousStep={previousStep}
+            howItWorksStep={() => setStep(50)}
+          />
+        );
+      case 3:
+        return <Step3 nextStep={nextStep} previousStep={previousStep} />;
+      case 4:
+        return <Step4 nextStep={nextStep} previousStep={previousStep} />;
+      case 5:
+        return <Step5 nextStep={nextStep} previousStep={previousStep} />;
+      case 6:
+        return <Step6 nextStep={nextStep} previousStep={previousStep} />;
+      case 7:
+        return <Step7 nextStep={nextStep} previousStep={previousStep} />;
+      case 8:
+        return <Step8 nextStep={nextStep} previousStep={previousStep} />;
+      case 9:
+        return <Step9 nextStep={nextStep} previousStep={previousStep} />;
+      case 10:
+        return <Step10 nextStep={nextStep} previousStep={previousStep} />;
+      case 11:
+        return <Step11 nextStep={nextStep} previousStep={previousStep} />;
       // How it works step
-      case 50: return <HowItWorks goToTest={goToTestStep} previousStep={() => { setStep(2) }} />
-      default: return null;
+      case 50:
+        return (
+          <HowItWorks
+            goToTest={goToTestStep}
+            previousStep={() => {
+              setStep(2);
+            }}
+          />
+        );
+      default:
+        return null;
     }
-  }
+  };
 
   return (
     <>
-      <GlobalStyle />
+      <GlobalStyle isResultPage={false} />
       <Header />
       <Head>
         <title>Teste Vocacional</title>
-        <meta name="description" content="O melhor teste de todos, agora em 1 minuto!" />
+        <meta
+          name="description"
+          content="O melhor teste de todos, agora em 1 minuto!"
+        />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       {getComponentToRender(step)}
     </>
-  )
+  );
 }
