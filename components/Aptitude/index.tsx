@@ -23,7 +23,7 @@ const AptitudeComponent: FC<IAptitude> = ({
   professions,
   name,
 }) => {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
 
   return (
     <Aptitude isOpen={isOpen}>

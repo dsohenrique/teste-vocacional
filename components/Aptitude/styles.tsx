@@ -14,6 +14,7 @@ export const Aptitude = styled.div<{ isOpen: boolean }>(
       transition: transform 250ms linear;
       align-self: center;
       padding: 0px 14px;
+      cursor: pointer;
     }
   `
 );
@@ -23,7 +24,6 @@ export const Header = styled.div`
   flex-direction: row;
   justify-content: space-between;
   text-align: left;
-  cursor: pointer;
   align-items: center;
 `;
 
