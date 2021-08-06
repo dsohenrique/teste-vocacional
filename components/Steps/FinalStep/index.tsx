@@ -64,7 +64,7 @@ const FinalStep: FC = () => {
       name: 'Perfil Interpessoal',
       content:
         'Uma pessoa com forte inteligência interpessoal é capaz de gerenciar as relações com mais sensibilidade facilmente, conquistar amigos com mais facilidade e lida bem inclusive com as pessoas mais difíceis.',
-      professions: ['Jornalistas', 'Professores', 'Turismólogos'],
+      professions: ['Jornalistas', 'Professores', 'Turismólogo'],
     },
   ];
   return (
