@@ -99,11 +99,11 @@ const Hero = ({
       <ChildrenContainer imageSize={imageSize}>
         {children}
 
-<<<<<<< HEAD
-        {onClick && <SubmitButton onClick={onClick}>Continuar</SubmitButton>}
-=======
-      {onClick && <SubmitButton onClick={onClick}>{ customButtonTooltip ? customButtonTooltip : 'Continuar' }</SubmitButton>}
->>>>>>> 24796fd53b40bd8c1070d734bc56b89b425c053f
+        {onClick && (
+          <SubmitButton onClick={onClick}>
+            {customButtonTooltip ? customButtonTooltip : 'Continuar'}
+          </SubmitButton>
+        )}
       </ChildrenContainer>
     </Container>
   );
