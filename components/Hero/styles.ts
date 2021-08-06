@@ -86,7 +86,7 @@ export const StyledSvg = styled.svg``;
 
 export const ChildrenContainer = styled.div`
   display: flex;
-  padding: 10px;
+  padding: 10px 0px 40px;
   justify-content: flex-end;
   gap: 10px;
   @media only screen and (max-width: 600px) {
@@ -133,3 +133,19 @@ export const ProgressBar = styled.div<{ percentage?: string }>(
     transition: width 250ms ease;
   `
 );
+
+export const SubmitButton = styled.div<{onClick: any}>`
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  cursor: pointer;
+  background-color: #ffffff;
+  padding: 24px 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Aprova;
+  font-size: 24px;
+  color: #191A1A;
+`;

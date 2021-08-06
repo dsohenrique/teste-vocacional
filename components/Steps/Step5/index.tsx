@@ -28,23 +28,65 @@ export default function Step4({ nextStep, previousStep }: { nextStep: any, previ
   };
 
   const secondHandleSubmit = (selected: string) => {
-    localStorage.setItem('@teste-vocacional:dream_course', selected);
+    localStorage.setItem('@teste-vocacional:dream_course', professionSelect);
     // nextStep();
   };
 
+  const selectSubtitle = () => {
+    switch (previousDecision) {
+      case 'Estou em busca da minha primeira graduação': return `Muito bom ${name}, você deve estar bem ansioso com os seus próximos desafios! Conta pra mim, você já tem algum curso em mente?`;
+      case 'Estou procurando uma pós graduação': return 'Excelente! Buscar mais conhecimento é sempre empolgante para a nossa carreira. Mas fiquei curioso, qual curso você fez na sua graduação?';
+      case 'Estou fazendo uma transição de carreira':  return 'Que empolgante! Mudanças fazem parte das nossas vidas e são enriquecedoras. E me conta, qual profissão você exercia anteriormente?';
+      default: return '';
+    }
+  }
+
   return (
-    <Hero title="" percentage="25" previousStep={previousStep} subtitle={`Muito bom ${name}, você deve estar bem ansioso com os seus próximos desafios! Conta pra mim, você já tem algum curso em mente?`} imageSize="big">
+    <Hero title="" onClick={() => secondHandleSubmit(option)} percentage="25" previousStep={previousStep} subtitle={selectSubtitle()} imageSize="big">
       <FormContainer>
-        <SelectionCard icon={<CheckIcon />} onClick={() => firstHandleSubmit('Sim, já pensei em algum curso')} title="Sim, já pensei em algum curso" />
-        <SelectionCard icon={<CloseIcon />} onClick={() => firstHandleSubmit('Não, ainda não tenho idéia')} title="Não, ainda não tenho idéia" />
+        {previousDecision === 'Estou em busca da minha primeira graduação' && 
+        <>
+          <SelectionCard
+            selected={option === 'Sim, já pensei em algum curso'} 
+            icon={<CheckIcon />}
+            onClick={() => firstHandleSubmit('Sim, já pensei em algum curso')}
+            title="Sim, já pensei em algum curso"
+          />
+          <SelectionCard
+            selected={option === 'Não, ainda não tenho idéia'}
+            icon={<CloseIcon />}
+            onClick={() => firstHandleSubmit('Não, ainda não tenho idéia')}
+            title="Não, ainda não tenho idéia"
+          />
+        </>}
+        {previousDecision === 'Estou procurando uma pós graduação' && 
+        <>
+          <Select
+            value={professionSelect}
+            onChange={(e: { target: { value: React.SetStateAction<string>; }; }) => setProfessionSelect(e.target.value)}
+            options={["Engenharia da Computacao", "Engenharia Civil", "Medicina", "Direito"]}
+          />
+        </>}
+        {previousDecision === 'Estou fazendo uma transição de carreira' && 
+        <>
+          <Select
+            value={professionSelect}
+            onChange={(e: { target: { value: React.SetStateAction<string>; }; }) => setProfessionSelect(e.target.value)}
+            options={["Desenvolvedor de Software", "Profissional de Recursos Humano", "CEO do Descomplica", "Médico"]}
+          />
+        </>}
         {/* Validar aqui qual componente exibir a depender do step4 */}
-        {option === 'Não, ainda não tenho idéia' && previousDecision === 'Estou em busca da minha primeira graduação' && (
-          <Select value={professionSelect} onChange={(e: { target: { value: React.SetStateAction<string>; }; }) => setProfessionSelect(e.target.value)} options={["Engenharia da Computacao", "Engenharia Civil", "Medicina", "Direito"]} />
+        {option === 'Sim, já pensei em algum curso' && previousDecision === 'Estou em busca da minha primeira graduação' && (
+          <Select
+            value={professionSelect}
+            onChange={(e: { target: { value: React.SetStateAction<string>; }; }) => setProfessionSelect(e.target.value)}
+            options={["Engenharia da Computacao", "Engenharia Civil", "Medicina", "Direito"]}
+          />
         )}
-        {option === 'Não, ainda não tenho idéia' && previousDecision === 'Estou procurando uma pós graduação' && (
+        {option === 'Sim, já pensei em algum curso' && previousDecision === 'Estou procurando uma pós graduação' && (
           <></>
         )}
-        {option === 'Não, ainda não tenho idéia' && previousDecision === 'Estou fazendo uma transição de carreira' && (
+        {option === 'Sim, já pensei em algum curso' && previousDecision === 'Estou fazendo uma transição de carreira' && (
           <></>
         )}
       </FormContainer>

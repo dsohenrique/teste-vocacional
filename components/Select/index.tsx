@@ -10,6 +10,7 @@ interface ISelect {
 const SelectionCard: FC<ISelect> = ({ options, value, onChange }) => {
   return (
     <Select id="course-select" value={value} onChange={onChange}>
+      <Option value="">Selecione uma opção</Option>
       {options.map((option, index) => (
         <Option key={index}>{option}</Option>
       ))}

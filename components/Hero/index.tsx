@@ -16,6 +16,7 @@ import {
   BackBar,
   ProgressBar,
   ProgressBarContainer,
+  SubmitButton,
 } from './styles';
 
 const Hero = ({
@@ -25,6 +26,7 @@ const Hero = ({
   previousStep,
   children,
   percentage,
+  onClick,
 }: {
   title: string;
   subtitle: string;
@@ -32,6 +34,7 @@ const Hero = ({
   previousStep?: any;
   children: any;
   percentage?: string;
+  onClick?: any;
 }) => {
   const [firstEffect, setFirstEffect] = useState(false);
   useEffect(() => {
@@ -92,6 +95,7 @@ const Hero = ({
         </StyledIntroContainer>
       </TextBaloon>
       <ChildrenContainer>{children}</ChildrenContainer>
+      {onClick && <SubmitButton onClick={onClick}>Continuar</SubmitButton>}
     </Container>
   );
 };

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const Card = styled.div`
+export const Card = styled.div<{ selected?: boolean }>`
   background-color: white;
   height: 295px;
   width: 239px;
@@ -12,10 +12,11 @@ export const Card = styled.div`
   box-shadow: #999 -8px 12px 0px -3px;
   cursor: pointer;
   transition: 0.4s;
-  &:hover {
-    background-color: ghostwhite;
+  ${props => props.selected ? `background-color: lightgray;
+  transform: translate(-2px,4px);`: ''}
+  ${props => !props.selected && `&:hover {
     transform: translate(2px,-4px);
-  }
+  }`}
 `;
 
 export const Icon = styled.div`

@@ -10,7 +10,7 @@ const fadeIn = `
 
 export const FormContainer = styled.div`
   display: flex;
-  padding: 20px 0px;
+  padding: 20px 0px 60px;
   width: 100%;
   align-items: center;
   justify-content: center;
