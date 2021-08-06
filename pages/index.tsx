@@ -10,11 +10,13 @@ export default function Home() {
   const [step, setStep] = useState(0);
 
   useEffect(() => {
-    setStep(1);
-    setTimeout(() => {
-      setStep(2);
-    }, 9000);
-  }, []);
+    if (step === 0 || step === 1) {
+      setStep(1);
+      setTimeout(() => {
+        setStep(2);
+      }, 9000);
+    }
+  }, [step]);
 
   const goToTestStep = () => {
     setStep(4);
@@ -31,10 +33,10 @@ export default function Home() {
   const getComponentToRender = (stepSelected: number) => {
     switch (stepSelected) {
       case 1: return <Step1 />
-      case 2: return <Step2 nextStep={nextStep} howItWorksStep={() => setStep(8)} />
+      case 2: return <Step2 nextStep={nextStep} previousStep={previousStep} howItWorksStep={() => setStep(8)} />
       case 3: return <h1 style={{ color: 'white' }}>LERIGOU</h1>
       // How it works step
-      case 8: return <HowItWorks goToTest={goToTestStep} previousStep={previousStep} />
+      case 8: return <HowItWorks goToTest={goToTestStep} previousStep={() => { setStep(2) }} />
       default: return null;
     }
   }

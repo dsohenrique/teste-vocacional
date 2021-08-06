@@ -2,9 +2,9 @@ import React, { useEffect, useState } from 'react';
 import { Typewriter } from 'react-typewriting-effect'
 import 'react-typewriting-effect/dist/index.css'
 import TextBaloon from '../TextBaloon';
-import { Container, StyledIntroContainer, StyledIntroTitle, StyledIntroSubtitle, StyledDescomplicaIconContainer, StyledDescomplicaIcon, ChildrenContainer } from './styles'
+import { Container, StyledIntroContainer, StyledIntroTitle, StyledIntroSubtitle, StyledDescomplicaIconContainer, StyledDescomplicaIcon, ChildrenContainer, StyledBackIconContainer, StyledBackIcon } from './styles'
 
-const Hero = ({ title, subtitle, imageSize, children }: { title: string, subtitle: string, imageSize: string, children: any }) => {
+const Hero = ({ title, subtitle, imageSize, previousStep, children }: { title: string, subtitle: string, imageSize: string, previousStep?: any, children: any }) => {
   const [firstEffect, setFirstEffect] = useState(false);
   useEffect(() => {
     setFirstEffect(false);
@@ -14,8 +14,15 @@ const Hero = ({ title, subtitle, imageSize, children }: { title: string, subtitl
   }, [title,  subtitle])
 
   return (<Container imgSize={imageSize}>
+    {previousStep && <StyledBackIconContainer>
+      <a onClick={previousStep}>
+        <StyledBackIcon />
+      </a>
+    </StyledBackIconContainer>}
     <StyledDescomplicaIconContainer>
-      <StyledDescomplicaIcon />
+      <a href="https://descomplica.com.br" target="_blank" rel="noreferrer">
+        <StyledDescomplicaIcon />
+      </a>
     </StyledDescomplicaIconContainer>
     <TextBaloon>
       <StyledIntroContainer>

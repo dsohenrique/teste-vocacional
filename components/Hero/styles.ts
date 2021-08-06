@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import DescomplicaIcon from './descomplicaIcon';
-import WomanIcon from './womanIcon';
+import BackIcon from './BackIcon';
 
 export const Container = styled.div<{ imgSize: string }>`
   display: flex;
@@ -59,7 +59,7 @@ export const StyledIntroSubtitle = styled.h4`
 `;
 
 export const StyledDescomplicaIconContainer = styled.div`
-  padding: 46px 0px 0px 46px;
+  padding: 10px 0px 0px 20px;
   @media only screen and (max-width: 600px) {
     padding: 10px 0px;
     position: relative;
@@ -69,6 +69,14 @@ export const StyledDescomplicaIconContainer = styled.div`
 `;
 
 export const StyledDescomplicaIcon = styled(DescomplicaIcon)``;
+
+export const StyledBackIconContainer = styled.div`
+  position: absolute;
+  top: 10px;
+  right: 20px;
+`;
+
+export const StyledBackIcon = styled(BackIcon)``;
 
 export const BackgroundImage = styled.img`
 

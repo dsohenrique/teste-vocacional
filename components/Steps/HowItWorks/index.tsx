@@ -5,7 +5,7 @@ import { FormContainer, ButtonContainer } from './styles';
 
 export default function HowItWorks({ goToTest, previousStep }: { goToTest: any, previousStep: any}) {
   return (
-    <Hero title="" subtitle="Opa, será um prazer contar para você como elaboramos esse teste vocacional! Se liga:" imageSize="big">
+    <Hero title="" previousStep={previousStep} subtitle="Opa, será um prazer contar para você como elaboramos esse teste vocacional! Se liga:" imageSize="big">
         <FormContainer>
           <p>Aqui inserimos um texto explicativo sobre como elaboramos o teste vocacional, quais as suas vantagens e qual resultado esperamos para o aluno que o faz.</p>
           <br />
