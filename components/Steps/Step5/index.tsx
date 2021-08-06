@@ -42,7 +42,7 @@ export default function Step4({ nextStep, previousStep }: { nextStep: any, previ
   }
 
   return (
-    <Hero title="" onClick={() => secondHandleSubmit()} percentage="25" previousStep={previousStep} subtitle={selectSubtitle()} imageSize="big">
+    <Hero title="" onClick={() => secondHandleSubmit()} percentage="25" previousStep={previousStep} subtitle={selectSubtitle()} imageSize="small">
       <FormContainer>
         {previousDecision === 'Estou em busca da minha primeira graduação' && 
         <>
