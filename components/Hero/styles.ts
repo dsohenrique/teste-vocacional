@@ -33,7 +33,7 @@ export const StyledIntroTitle = styled.h2`
   line-height: 64px;
   letter-spacing: -2.4px;
   text-overflow: ellipsis;
-  overflow: hidden; 
+  overflow: hidden;
   width: 100%;
   @media only screen and (max-width: 600px) {
     text-align: center;
@@ -59,6 +59,8 @@ export const StyledIntroSubtitle = styled.h4`
 `;
 
 export const StyledDescomplicaIconContainer = styled.div`
+  display: flex;
+  align-items: center;
   padding: 10px 0px 0px 20px;
   @media only screen and (max-width: 600px) {
     padding: 10px 0px;
@@ -79,13 +81,9 @@ export const StyledBackIconContainer = styled.div`
 
 export const StyledBackIcon = styled(BackIcon)``;
 
-export const BackgroundImage = styled.img`
+export const BackgroundImage = styled.img``;
 
-`;
-
-export const StyledSvg = styled.svg`
-
-`;
+export const StyledSvg = styled.svg``;
 
 export const ChildrenContainer = styled.div`
   display: flex;
@@ -96,4 +94,32 @@ export const ChildrenContainer = styled.div`
     justify-content: center;
     padding: 0px;
   }
+`;
+
+export const StyledProgressBar = styled.div`
+  position: relative;
+  width: 70%;
+  height: 10px;
+  margin: 0 auto;
+  div {
+    border-radius: 10px;
+  }
+  @media only screen and (max-width: 1000px) {
+    width: 50%;
+  }
+`;
+
+export const BackBar = styled.div`
+  position: absolute;
+  background-color: #666;
+  width: 100%;
+  height: 100%;
+`;
+
+export const ProgressBar = styled.div`
+  position: absolute;
+  background-color: white;
+  width: ${(props) => props.percentage}%;
+  height: 100%;
+  transition: width 250ms ease;
 `;
