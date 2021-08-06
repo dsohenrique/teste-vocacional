@@ -4,13 +4,14 @@ import { Card, Icon, Title, MinorCard, MinorTitle } from './styles';
 interface ISelectionCard {
   icon: any;
   title: string;
+  onClick: any;
 }
 
-const SelectionCard: FC<ISelectionCard> = ({ icon, title }) => {
+const SelectionCard: FC<ISelectionCard> = ({ icon, title, onClick }) => {
   const hasIcon = icon && true;
   if (icon) {
     return (
-      <Card>
+      <Card onClick={onClick}>
         {icon && <Icon>{icon}</Icon>}
         <Title>{title}</Title>
       </Card>
