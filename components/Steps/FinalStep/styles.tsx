@@ -104,6 +104,11 @@ export const Professions = styled.div`
   align-items: center;
   justify-content: space-between;
   margin-top: 60px;
+  gap: 36px;
+
+  div {
+    background-color: #d6fced;
+  }
 `;
 
 export const Personalities = styled.span`
@@ -158,4 +163,14 @@ export const StyledApititudes = styled.div`
   align-items: center;
   gap: 24px;
   margin-top: 46px;
+`;
+
+export const Beyoncelle = styled.img`
+  width: 200px;
+  height: 200px;
+`;
+
+export const Justino = styled.img`
+  width: 200px;
+  height: 200px;
 `;

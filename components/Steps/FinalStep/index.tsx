@@ -3,8 +3,6 @@ import TextBaloon from '../../TextBaloon';
 import SelectionCard from '../../SelectionCard';
 import {
   Valdisney,
-  Beyoncelle,
-  Justino,
   Logo,
   Advogado,
   Jornalista,
@@ -26,6 +24,8 @@ import {
   Personality,
   YourAptitude,
   StyledApititudes,
+  Beyoncelle,
+  Justino,
 } from './styles';
 
 const FinalStep: FC = () => {
@@ -122,11 +122,15 @@ const FinalStep: FC = () => {
           <span> Valdisneydersson </span>
         </Personality>
         <Personality>
-          <Valdisney />
+          <Beyoncelle src={'https://i.imgur.com/FE0lDkM.png'} />
           <span> Beyoncelle </span>
         </Personality>
         <Personality>
-          <Valdisney />
+          <Justino
+            src={
+              'https://cdn.discordapp.com/attachments/872823344221810699/873302421152096296/2018-10_ILUSTRA_71.png'
+            }
+          />
           <span> Justino Borges </span>
         </Personality>
       </PersonalitiesList>
