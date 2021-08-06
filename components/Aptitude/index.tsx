@@ -46,8 +46,8 @@ const AptitudeComponent: FC<IAptitude> = ({
       <Content isOpen={isOpen}>
         <Text>{content}</Text>
         <Professions>
-          {professions.map((profession) => (
-            <Profession>{profession}</Profession>
+          {professions.map((profession, index) => (
+            <Profession key={index}>{profession}</Profession>
           ))}
         </Professions>
       </Content>
