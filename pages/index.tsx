@@ -10,6 +10,8 @@ import Step6 from '../components/Steps/Step6';
 import Step7 from '../components/Steps/Step7';
 import Step8 from '../components/Steps/Step8';
 import Step9 from '../components/Steps/Step9';
+import Step10 from '../components/Steps/Step10';
+import Step11 from '../components/Steps/Step11';
 import HowItWorks from '../components/Steps/HowItWorks';
 
 export default function Home() {
@@ -48,6 +50,8 @@ export default function Home() {
       case 7: return <Step7 nextStep={nextStep} previousStep={previousStep} />
       case 8: return <Step8 nextStep={nextStep} previousStep={previousStep} />
       case 9: return <Step9 nextStep={nextStep} previousStep={previousStep} />
+      case 10: return <Step10 nextStep={nextStep} previousStep={previousStep} />
+      case 11: return <Step11 nextStep={nextStep} previousStep={previousStep} />
       // How it works step
       case 50: return <HowItWorks goToTest={goToTestStep} previousStep={() => { setStep(2) }} />
       default: return null;
