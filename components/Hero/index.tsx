@@ -12,9 +12,6 @@ import {
   ChildrenContainer,
   StyledBackIconContainer,
   StyledBackIcon,
-  StyledProgressBar,
-  BackBar,
-  ProgressBar,
 } from './styles';
 
 const Hero = ({
@@ -23,14 +20,12 @@ const Hero = ({
   imageSize,
   previousStep,
   children,
-  percentage,
 }: {
   title: string;
   subtitle: string;
   imageSize: string;
   previousStep?: any;
   children: any;
-  percentage: string;
 }) => {
   const [firstEffect, setFirstEffect] = useState(false);
   useEffect(() => {
