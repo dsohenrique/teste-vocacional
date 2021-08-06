@@ -6,7 +6,6 @@ import { Container, StyledIntroContainer, StyledIntroTitle, StyledIntroSubtitle,
 
 const Hero = ({ title, subtitle, imageSize, children }: { title: string, subtitle: string, imageSize: string, children: any }) => {
   const [firstEffect, setFirstEffect] = useState(false);
-
   return (<Container imgSize={imageSize}>
     <StyledDescomplicaIconContainer>
       <StyledDescomplicaIcon />

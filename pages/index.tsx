@@ -1,10 +1,20 @@
-import { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Head from 'next/head'
 import Header, { GlobalStyle } from '../components/Header'
+import Step1 from '../components/Steps/Step1';
+import Step2 from '../components/Steps/Step2';
 
 export default function Home() {
   // Como salvar a pontuacao dele para o calculo final?
-  const [step, setStep] = useState(0);
+  const [step, setStep] = useState(1);
+
+
+  useEffect(() => {
+    setStep(1);
+    setTimeout(() => {
+      setStep(2);
+    }, 9000);
+  }, []);
 
   const nextStep = () => {
     setStep(step + 1);
@@ -14,10 +24,12 @@ export default function Home() {
     setStep(step - 1);
   };
 
-  const getComponentToRender = (stepSelected: number | undefined) => {
-    // const index = componentsComposition.findIndex(item => item.step === stepSelected);
-    // return componentsComposition[index];
-    return <h1>Teste</h1>
+  const getComponentToRender = () => {
+    switch (step) {
+      case 1: return <Step1 />
+      case 2: return <Step2 />
+      default: return <Step1 />
+    }
   }
 
   return (
