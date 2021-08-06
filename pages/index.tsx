@@ -14,7 +14,7 @@ export default function Home() {
       setStep(1);
       setTimeout(() => {
         setStep(2);
-      }, 6000);
+      }, 4500);
     }
   }, [step]);
 
