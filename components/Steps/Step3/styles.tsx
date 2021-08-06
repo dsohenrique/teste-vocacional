@@ -20,6 +20,7 @@ export const FormContainer = styled.div`
   width: 837px;
   border-radius: 65px 65px 65px 0;
   @media only screen and (max-width: 600px) {
+    gap: 20px;
     min-height: 150px;
     max-width: 96vw;
     border-radius: 65px;
