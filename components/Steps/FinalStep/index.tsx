@@ -9,6 +9,7 @@ import {
   Publicitario,
   Pedagogo,
 } from './icons';
+
 import Aptitude from '../../Aptitude';
 import {
   Wrapper,

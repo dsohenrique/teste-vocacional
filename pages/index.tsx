@@ -14,6 +14,7 @@ import Step10 from '../components/Steps/Step10';
 import Step11 from '../components/Steps/Step11';
 import Result from '../components/Steps/Result';
 import HowItWorks from '../components/Steps/HowItWorks';
+import FinalStep from '../components/Steps/FinalStep';
 
 export default function Home() {
   // Como salvar a pontuacao dele para o calculo final?
@@ -74,11 +75,13 @@ export default function Home() {
         return (
           <Result
             nextStep={() => {
-              setStep(50);
+              setStep(13);
             }}
             previousStep={previousStep}
           />
         );
+      case 13:
+        return <FinalStep />;
       // How it works step
       case 50:
         return (
@@ -96,7 +99,7 @@ export default function Home() {
 
   return (
     <>
-      <GlobalStyle isResultPage={false} />
+      <GlobalStyle isResultPage={step === 13 && true} />
       <Header />
       <Head>
         <title>Teste Vocacional</title>
