@@ -16,6 +16,10 @@ export default function Home() {
     }, 9000);
   }, []);
 
+  const goToTestStep = () => {
+    setStep(4);
+  };
+
   const nextStep = () => {
     setStep(step + 1);
   };
@@ -30,7 +34,7 @@ export default function Home() {
       case 2: return <Step2 nextStep={nextStep} howItWorksStep={() => setStep(8)} />
       case 3: return <h1 style={{ color: 'white' }}>LERIGOU</h1>
       // How it works step
-      case 8: return <HowItWorks previousStep={previousStep} />
+      case 8: return <HowItWorks goToTest={goToTestStep} previousStep={previousStep} />
       default: return null;
     }
   }

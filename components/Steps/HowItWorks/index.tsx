@@ -1,8 +1,9 @@
 import React from 'react';
 import Hero from '../../Hero'
-import { FormContainer } from './styles';
+import ActionButton from '../../ActionButton';
+import { FormContainer, ButtonContainer } from './styles';
 
-export default function HowItWorks({ previousStep }: { previousStep: any}) {
+export default function HowItWorks({ goToTest, previousStep }: { goToTest: any, previousStep: any}) {
   return (
     <Hero title="" subtitle="Opa, será um prazer contar para você como elaboramos esse teste vocacional! Se liga:" imageSize="big">
         <FormContainer>
@@ -14,6 +15,11 @@ export default function HowItWorks({ previousStep }: { previousStep: any}) {
           <p>O estudo revela que todos nós somos inteligentes múltiplos, porém existem aptidões que se destacam mais do que as outras e apontam para determinadas áreas. O que leva as pessoas a potencializar as capacidades são os incentivos educacionais e os trajetos que percorrem.</p>
           <br />
           <p>Sendo assim, as tendências profissionais estão ligadas às inteligências e servem de base para as escolhas. Geralmente, atrelamos a ideia de inteligência ao vasto conhecimento acadêmico. No entanto, cada sujeito tem habilidades individuais que independem de méritos escolares.</p>
+          <ButtonContainer>
+            <ActionButton onClick={goToTest} isDark={false}>
+              Fazer o teste
+            </ActionButton>
+          </ButtonContainer>
         </FormContainer>
     </Hero>
   )

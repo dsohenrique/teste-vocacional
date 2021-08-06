@@ -23,3 +23,11 @@ export const FormContainer = styled.div`
     background-color: rgba(0, 0, 0, 0.6);
   }
 `;
+
+export const ButtonContainer = styled.div`
+  display: flex;
+  justify-content: flex-end;
+  @media only screen and (max-width: 600px) {
+    justify-content: center;
+  }
+`;

@@ -5,7 +5,7 @@ export const StyledActionButton = styled.button<{ isDark?: boolean }>`
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  min-height: 60px;
+  height: 60px;
   width: 300px;
   background-color: ${(props) => props.isDark ? '#111111' : '#ffffff'};
   border: 2px solid ${(props) => props.isDark ? '#ffffff' : 'transparent'};
