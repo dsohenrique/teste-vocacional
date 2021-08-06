@@ -20,6 +20,6 @@ export const FormContainer = styled.div`
   @media only screen and (max-width: 600px) {
     min-height: 150px;
     max-width: 96vw;
-    border-radius: 65px;
+    background-color: rgba(0, 0, 0, 0.6);
   }
 `;
