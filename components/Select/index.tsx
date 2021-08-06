@@ -1,18 +1,10 @@
 import React, { FC } from 'react';
-import { Select, Option } from './styles';
+import { Input } from './styles';
 
-interface ISelect {
-  options: string[];
-}
-
-const SelectionCard: FC<ISelect> = ({ options }) => {
+const InputText = ({ value, onChange }: { value: any, onChange: any }) => {
   return (
-    <Select>
-      {options.map((option, index) => (
-        <Option key={index}>{option}</Option>
-      ))}
-    </Select>
+    <Input value={value} onChange={onChange} />
   );
 };
 
-export default SelectionCard;
+export default InputText;

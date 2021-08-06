@@ -3,6 +3,7 @@ import Head from 'next/head'
 import Header, { GlobalStyle } from '../components/Header'
 import Step1 from '../components/Steps/Step1';
 import Step2 from '../components/Steps/Step2';
+import Step3 from '../components/Steps/Step3';
 import HowItWorks from '../components/Steps/HowItWorks';
 
 export default function Home() {
@@ -33,10 +34,10 @@ export default function Home() {
   const getComponentToRender = (stepSelected: number) => {
     switch (stepSelected) {
       case 1: return <Step1 />
-      case 2: return <Step2 nextStep={nextStep} previousStep={previousStep} howItWorksStep={() => setStep(8)} />
-      case 3: return <h1 style={{ color: 'white' }}>LERIGOU</h1>
+      case 2: return <Step2 nextStep={nextStep} previousStep={previousStep} howItWorksStep={() => setStep(50)} />
+      case 3: return <Step3 nextStep={nextStep} previousStep={previousStep} />
       // How it works step
-      case 8: return <HowItWorks goToTest={goToTestStep} previousStep={() => { setStep(2) }} />
+      case 50: return <HowItWorks goToTest={goToTestStep} previousStep={() => { setStep(2) }} />
       default: return null;
     }
   }
