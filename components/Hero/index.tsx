@@ -56,7 +56,7 @@ const Hero = ({
         {percentage && (
           <StyledProgressBar>
             <BackBar />
-            <ProgressBar percentage="30" />
+            <ProgressBar percentage={percentage} />
           </StyledProgressBar>
         )}
       </StyledDescomplicaIconContainer>
