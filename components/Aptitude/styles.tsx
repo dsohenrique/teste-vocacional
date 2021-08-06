@@ -93,6 +93,7 @@ export const Professions = styled.div`
   align-items: center;
   text-align: center;
   width: 100%;
+  gap: 40px;
 `;
 
 export const Profession = styled.div`
