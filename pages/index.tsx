@@ -9,12 +9,6 @@ import HowItWorks from '../components/Steps/HowItWorks';
 export default function Home() {
   // Como salvar a pontuacao dele para o calculo final?
   const [step, setStep] = useState(0);
-  const [test, setTest] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    career_state: '',
-  });
 
   useEffect(() => {
     if (step === 0 || step === 1) {
@@ -31,7 +25,6 @@ export default function Home() {
 
   const nextStep = () => {
     setStep(step + 1);
-    console.log(test);
   };
 
   const previousStep = () => {
@@ -42,7 +35,7 @@ export default function Home() {
     switch (stepSelected) {
       case 1: return <Step1 />
       case 2: return <Step2 nextStep={nextStep} previousStep={previousStep} howItWorksStep={() => setStep(50)} />
-      case 3: return <Step3 nextStep={nextStep} previousStep={previousStep} test={test} setTest={setTest} />
+      case 3: return <Step3 nextStep={nextStep} previousStep={previousStep} />
       // How it works step
       case 50: return <HowItWorks goToTest={goToTestStep} previousStep={() => { setStep(2) }} />
       default: return null;

@@ -1,21 +1,31 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Hero from '../../Hero'
 import ActionButton from '../../ActionButton';
 import InputText from '../../InputText';
 import { FormContainer } from './styles';
 
-export default function Step3({ nextStep, previousStep, test, setTest }: { nextStep: any, previousStep: any, test: any, setTest: any }) {
+export default function Step3({ nextStep, previousStep }: { nextStep: any, previousStep: any }) {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
 
+  useEffect(() => {
+    // Get answers from localStorage
+    if (localStorage.getItem('@teste-vocacional:name')) {
+      setName(localStorage.getItem('@teste-vocacional:name') || "");
+    }
+    if (localStorage.getItem('@teste-vocacional:email')) {
+      setEmail(localStorage.getItem('@teste-vocacional:email') || "");
+    }
+    if (localStorage.getItem('@teste-vocacional:phone')) {
+      setPhone(localStorage.getItem('@teste-vocacional:phone') || "");
+    }
+  }, []);
+
   const handleSubmit = () => {
-    setTest({
-      ...test,
-      name,
-      email,
-      phone,
-    })
+    localStorage.setItem('@teste-vocacional:name', name);
+    localStorage.setItem('@teste-vocacional:email', email);
+    localStorage.setItem('@teste-vocacional:phone', phone);
     nextStep();
   }
 
